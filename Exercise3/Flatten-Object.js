@@ -4,5 +4,3 @@ const getNestingLevel = (arr) => {
 };
 
 const flattenArray = (arr) => (getNestingLevel(arr) ? arr.flat(Infinity) : arr);
-
-console.log(flattenArray([1, 2, 4]));
