@@ -3,6 +3,6 @@ const getNestingLevel = (arr) => {
   return 1 + Math.max(0, ...arr.map(getNestingLevel));
 };
 
-function flattenArray(arr) {
-  return arr.flat(Infinity);
-}
+const flattenArray = (arr) => (getNestingLevel(arr) ? arr.flat(Infinity) : arr);
+
+console.log(flattenArray([1, 2, 4]));
